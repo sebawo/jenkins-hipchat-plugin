@@ -173,7 +173,8 @@ public class ActiveNotifier implements FineGrainedNotifier {
         }
 
         public MessageBuilder appendOpenLink() {
-            String url = notifier.getBuildServerUrl() + build.getUrl();
+//            String url = notifier.getBuildServerUrl() + build.getUrl();
+            String url = "https://qajenkins.futuresimple.com/jenkins/" + build.getUrl() + "/console";
             message.append(" (<a href='").append(url).append("'>Open</a>)");
             return this;
         }
